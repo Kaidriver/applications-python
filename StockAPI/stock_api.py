@@ -15,6 +15,8 @@ async def root(ticker):
     response = requests.get(url = "https://www.alphavantage.co/query", params = params)
     json_data = response.json()
 
+    print(json_data)
+    
     if "Time Series (Daily)" not in json_data:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,

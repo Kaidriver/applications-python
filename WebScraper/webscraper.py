@@ -1,5 +1,4 @@
 #Python program to scrape website 
-#and save quotes from website
 import requests
 from bs4 import BeautifulSoup
 
@@ -7,8 +6,6 @@ URL = "https://www.foxsports.com/nfl/scores"
 r = requests.get(URL)
  
 soup = BeautifulSoup(r.content, 'html5lib')
- 
-quotes=[]  # a list to store quotes
 
 team_name = input("Enter team name: ")
 
